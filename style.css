@@ -1,0 +1,266 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0b0f19;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin-left: 25px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  padding: 120px 10%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.glow {
+  color: #00ffff;
+  text-shadow: 0 0 15px rgba(0,255,255,0.6);
+}
+
+.hero p {
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+/* BUTTONS */
+.btn-primary,
+.btn-outline {
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 15px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #00ffff;
+  color: #000;
+}
+
+.btn-outline {
+  border: 1px solid #00ffff;
+  color: #00ffff;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-3px);
+  transition: 0.3s;
+}
+
+/* PROFILE FIXED */
+.profile-fixed {
+  position: absolute;
+  top: 90px;
+  right: 40px;
+}
+
+.profile-fixed img {
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0,255,255,0.5);
+  border: 2px solid rgba(0,255,255,0.4);
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* GLASSMORPHISM */
+.glass-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.glass-card {
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.08);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.15);
+  transition: 0.3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0,255,255,0.4);
+}
+
+/* Contact */
+.contact-link {
+  color: #00ffff;
+  text-decoration: none;
+  position: relative;
+}
+
+.contact-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #00ffff;
+  transition: 0.3s;
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+
+/* FOOTER */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #05070f;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .profile-fixed {
+    top: 80px;
+    right: 20px;
+  }
+
+  .profile-fixed img{
+    width: 160px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+
+/* EXPERIENCE GRID */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+/* EXPERIENCE CARD */
+.experience-card {
+  text-align: left;
+  padding: 30px;
+  position: relative;
+}
+
+/* Company Name */
+.experience-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
+  margin-bottom: 6px;
+}
+
+/* Role */
+.experience-card .role {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: #b0f7ff;
+  opacity: 0.9;
+}
+
+/* Description */
+.experience-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Anime Hover Effect */
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 40px rgba(0,255,255,0.45);
+}
+
+/* Subtle Glow Border */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,0.3);
+  pointer-events: none;
+}
+
