@@ -13,48 +13,110 @@ body {
 }
 
 /* NAVBAR */
+/* ===== NAVBAR BASE ===== */
+/* ===== NAVBAR WRAPPER ===== */
 .navbar {
   position: fixed;
-  top: 0;
+  top: 20px;
   width: 100%;
-  padding: 20px 8%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* ===== GLASS CONTAINER ===== */
+.nav-glass {
+  width: 85%;
+  max-width: 1200px;
+  padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.6);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid rgba(0, 255, 255, 0.25);
+
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.15);
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-}
-
-.navbar li {
-  margin-left: 25px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-}
-
+/* ===== LOGO ===== */
 .logo {
   font-family: 'Orbitron', sans-serif;
+  font-size: 1.4rem;
   color: #00ffff;
+  letter-spacing: 1px;
 }
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: #eaeaea;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+/* ===== GLASS UNDERLINE (ANIME STYLE) ===== */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #00ffff,
+    transparent
+  );
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-glass {
+    justify-content: center;
+  }
+
+  .nav-links {
+    display: none; /* later we can add hamburger */
+  }
+}
+
+
 
 /* HERO */
 .hero {
   min-height: 100vh;
-  padding: 120px 10%;
   display: flex;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  justify-content: space-between;
+  padding: 120px 8% 60px;
+  gap: 40px;
 }
 
 .bg-overlay {
@@ -65,13 +127,12 @@ body {
 
 .hero-content {
   max-width: 650px;
-  position: relative;
-  z-index: 2;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-family: 'Orbitron', sans-serif;
+  color: #00ffff;
 }
 
 .glow {
@@ -83,6 +144,25 @@ body {
   margin-top: 20px;
   line-height: 1.7;
 }
+
+.profile-fixed {
+  position: fixed;
+  top: 110px;               /* below navbar */
+  right: clamp(16px, 4vw, 40px);
+  z-index: 10;
+
+  pointer-events: none;    /* prevents interaction issues */
+}
+
+.profile-fixed img {
+  width: clamp(180px, 22vw, 260px);
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+
+  border-radius: 18px;
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.35);
+}
+
 
 /* BUTTONS */
 .btn-primary,
@@ -189,25 +269,12 @@ body {
 }
 
 /* MOBILE FIX */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .profile-fixed {
-    top: 80px;
-    right: 20px;
-  }
-
-  .profile-fixed img{
-    width: 160px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .navbar ul {
     display: none;
   }
 }
+
 
 
 /* EXPERIENCE GRID */
