@@ -16,3 +16,4 @@ setInterval(() => {
   hero.style.backgroundImage = `url(${backgrounds[index]})`;
 }, 60000);
 
+
