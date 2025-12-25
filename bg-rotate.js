@@ -1,11 +1,11 @@
 const hero = document.querySelector(".hero");
 
 const backgrounds = [
-  "Photo/Child.jpg",
-  "Photo/Pro.jpg",
-  "Photo/Programmer.jpg",
-  "Photo/System.jpg",
-  "Photo/Techie.jpg"
+  "assets/Photo/Child.jpg",
+  "assets/Photo/Pro.jpg",
+  "assets/Photo/Programmer.jpg",
+  "assets/Photo/System.jpg",
+  "assets/Photo/Techie.jpg"
 ];
 
 let index = 0;
@@ -15,3 +15,4 @@ setInterval(() => {
   index = (index + 1) % backgrounds.length;
   hero.style.backgroundImage = `url(${backgrounds[index]})`;
 }, 60000);
+
