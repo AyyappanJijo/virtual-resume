@@ -147,12 +147,12 @@ body {
 
 .profile-fixed {
   position: fixed;
-  top: 110px;               /* below navbar */
+  top: 110px;
   right: clamp(16px, 4vw, 40px);
   z-index: 10;
-
-  pointer-events: none;    /* prevents interaction issues */
+  pointer-events: none;
 }
+
 
 .profile-fixed img {
   width: clamp(180px, 22vw, 260px);
@@ -329,6 +329,55 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(0,255,255,0.3);
   pointer-events: none;
+}
+
+/* ===== MOBILE ENHANCEMENTS ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 6% 60px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons,
+  .resume-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: 100%;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  .section {
+    padding: 80px 6%;
+  }
+}
+
+
+/* Typing Cursor */
+.typing::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 
 
