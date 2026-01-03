@@ -1,11 +1,11 @@
 const hero = document.querySelector(".hero");
 
 const backgrounds = [
-  "assets/Photo/Child.jpg",
-  "assets/Photo/Pro.jpg",
-  "assets/Photo/Programer.jpg",
-  "assets/Photo/System.jpg",
-  "assets/Photo/Techie.jpg"
+  "./assets/Photo/Child.jpg",
+  "./assets/Photo/Pro.jpg",
+  "./assets/Photo/Programer.jpg",
+  "./assets/Photo/System.jpg",
+  "./assets/Photo/Techie.jpg"
 ];
 
 let index = 0;
@@ -29,4 +29,5 @@ function typeEffect() {
 }
 
 window.addEventListener("load", typeEffect);
+
 
