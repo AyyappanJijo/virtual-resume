@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ayyappan Jijo | Portfolio</title>
 
+
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins&display=swap" rel="stylesheet">
 
   <!-- AOS -->
@@ -13,6 +16,17 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+
+  <!-- LinkedIn / Open Graph Preview -->
+<meta property="og:title" content="Ayyappan Jijo | Software Engineer Portfolio" />
+<meta property="og:description" content="System Engineer at Infosys | Java, Spring Boot, Data Analytics | Personal Portfolio" />
+<meta property="og:image" content="https://ayyappanjijo.github.io/virtual-resume/assets/Photo/Its_Me_Jijo.png" />
+<meta property="og:url" content="https://ayyappanjijo.github.io/virtual-resume/" />
+<meta property="og:type" content="website" />
+
+<!-- Twitter Preview -->
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body>
@@ -44,7 +58,10 @@
   <div class="bg-overlay"></div>
 
   <section class="hero-content" data-aos="fade-up">
-    <h1>Hi, I’m <span class="glow">Ayyappan Jijo</span></h1>
+  <h1>
+  Hi, I’m <span class="glow typing" id="typing-name"></span>
+  </h1>
+
 
     <p>
       I am a Computer Science graduate with hands-on experience in backend development and data analytics.
@@ -180,7 +197,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init({ once: true, duration: 1000 });</script>
 
-<script src="bg-rotate.js"></script>
+<script src="bg-rotate.js" defer></script>
+
+
 </body>
 </html>
-
