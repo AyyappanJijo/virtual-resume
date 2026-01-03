@@ -3,7 +3,7 @@ const hero = document.querySelector(".hero");
 const backgrounds = [
   "assets/Photo/Child.jpg",
   "assets/Photo/Pro.jpg",
-  "assets/Photo/Programmer.jpg",
+  "assets/Photo/Programer.jpg",
   "assets/Photo/System.jpg",
   "assets/Photo/Techie.jpg"
 ];
@@ -16,4 +16,17 @@ setInterval(() => {
   hero.style.backgroundImage = `url(${backgrounds[index]})`;
 }, 60000);
 
+const text = "Ayyappan Jijo";
+const typingElement = document.getElementById("typing-name");
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    typingElement.textContent += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 120);
+  }
+}
+
+window.addEventListener("load", typeEffect);
 
