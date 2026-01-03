@@ -119,6 +119,10 @@ body {
   gap: 40px;
 }
 
+.hero {
+  background: url("./assets/Photo/Its_Me_Jijo.png") center/cover no-repeat;
+}
+
 .bg-overlay {
   position: absolute;
   inset: 0;
@@ -379,5 +383,6 @@ body {
   0%, 50%, 100% { opacity: 1; }
   25%, 75% { opacity: 0; }
 }
+
 
 
