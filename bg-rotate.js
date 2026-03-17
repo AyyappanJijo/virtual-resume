@@ -1,33 +1,51 @@
-const hero = document.querySelector(".hero");
+// ── SCROLL SPY (active nav link) ──
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
 
-const backgrounds = [
-  "./assets/Photo/Child.jpg",
-  "./assets/Photo/Pro.jpg",
-  "./assets/Photo/Programer.jpg",
-  "./assets/Photo/System.jpg",
-  "./assets/Photo/Techie.jpg"
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === "#" + current) {
+      link.classList.add("active");
+    }
+  });
+});
+
+
+// ── BACKGROUND AUTO CHANGE every 50 seconds ──
+const images = [
+  "assets/Photo/Pro.jpg",
+  "assets/Photo/Programer.jpg",
+  "assets/Photo/System.jpg",
+  "assets/Photo/Techie.jpg"
 ];
 
 let index = 0;
-hero.style.backgroundImage = `url(${backgrounds[0]})`;
 
-setInterval(() => {
-  index = (index + 1) % backgrounds.length;
-  hero.style.backgroundImage = `url(${backgrounds[index]})`;
-}, 60000);
+function changeBackground() {
+  index = (index + 1) % images.length;
+  const hero = document.querySelector(".hero");
 
-const text = "Ayyappan Jijo";
-const typingElement = document.getElementById("typing-name");
-let i = 0;
+  // Fade out
+  hero.style.opacity = "0.6";
 
-function typeEffect() {
-  if (i < text.length) {
-    typingElement.textContent += text.charAt(i);
-    i++;
-    setTimeout(typeEffect, 120);
-  }
+  setTimeout(() => {
+    hero.style.background = `url(${images[index]}) center/cover no-repeat`;
+    // Fade back in
+    hero.style.opacity = "1";
+  }, 600);
 }
 
-window.addEventListener("load", typeEffect);
+// Smooth opacity transition on hero
+document.querySelector(".hero").style.transition = "opacity 0.6s ease, background 0.5s ease";
 
-
+setInterval(changeBackground, 50000); // 50 seconds
