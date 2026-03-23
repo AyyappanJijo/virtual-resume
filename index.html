@@ -3,126 +3,325 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayyappan Jijo Portfolio</title>
+  <title>Ayyappan Jijo — System Engineer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- ══ NAVBAR ══ -->
   <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">Ayyappan</div>
-      <ul class="nav-links">
-        <li><a href="#home" class="active">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#cv">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="logo">Ayyappan</div>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#home"       class="active">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#cv">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger (mobile only) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
 
-  <!-- HERO -->
+  <!-- Mobile drawer -->
+  <div class="nav-drawer" id="nav-drawer">
+    <ul>
+      <li><a href="#home"       class="drawer-link active">About</a></li>
+      <li><a href="#skills"     class="drawer-link">Skills</a></li>
+      <li><a href="#experience" class="drawer-link">Experience</a></li>
+      <li><a href="#projects"   class="drawer-link">Projects</a></li>
+      <li><a href="#cv"         class="drawer-link">Resume</a></li>
+      <li><a href="#contact"    class="drawer-link">Contact</a></li>
+    </ul>
+  </div>
+
+
+  <!-- ══ HERO ══ -->
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Hi, I'm Ayyappan Jijo</h1>
+      <p class="hero-eyebrow">System Engineer · Backend Developer</p>
+      <h1>Hi, I'm<br><span class="cyan-part">Ayyappan Jijo</span></h1>
+
+      <div class="hero-badges">
+        <span class="badge">Java</span>
+        <span class="badge">Spring Boot</span>
+        <span class="badge">REST APIs</span>
+        <span class="badge">Infosys</span>
+      </div>
+
       <p>
-        System Engineer at Infosys specializing in backend development using Java and Spring Boot.
-        I build scalable REST APIs, optimize application performance, and work with enterprise-level systems.
+        Specializing in backend development with Java and Spring Boot.
+        I build scalable REST APIs, optimize application performance,
+        and deliver robust enterprise-level systems.
       </p>
+
       <div class="hero-buttons">
-        <a href="#projects" class="btn">Projects</a>
-        <a href="#contact" class="btn-outline">Contact</a>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact"  class="btn-outline">Get in Touch</a>
       </div>
     </div>
 
-    <!-- PROFILE IMAGE RIGHT -->
     <div class="profile-container">
-      <img src="Photo/Its_Me_Jijo.png" class="profile-img" alt="Ayyappan Jijo">
+      <img
+        src="assets/Photo/Its_Me_Jijo.png"
+        class="profile-img"
+        alt="Ayyappan Jijo"
+        onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=Ayyappan+Jijo&size=260&background=0b132b&color=00e0ff&bold=true';"
+      >
     </div>
   </section>
 
-  <!-- SKILLS -->
+
+  <!-- ══ SKILLS ══ -->
   <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card">Java</div>
-      <div class="card">Spring Boot</div>
-      <div class="card">Python</div>
-      <div class="card">SQL</div>
-      <div class="card">Power BI</div>
-      <div class="card">REST APIs</div>
+    <div class="section-divider"></div>
+    <span class="section-label reveal">Tech Stack</span>
+    <h2 class="reveal reveal-delay-1">Skills &amp; Technologies</h2>
+    <p class="section-sub reveal reveal-delay-2">Technologies I work with to build reliable, scalable systems.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">☕</div>
+        <h3>Java</h3>
+        <p>Core language for backend development</p>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">🌱</div>
+        <h3>Spring Boot</h3>
+        <p>Enterprise application framework</p>
+      </div>
+      <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-icon">🐍</div>
+        <h3>Python</h3>
+        <p>Scripting &amp; data processing</p>
+      </div>
+      <div class="skill-card reveal reveal-delay-4">
+        <div class="skill-icon">🗄️</div>
+        <h3>SQL</h3>
+        <p>Database design &amp; query optimization</p>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-icon">📊</div>
+        <h3>Power BI</h3>
+        <p>Business intelligence &amp; reporting</p>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-icon">🔗</div>
+        <h3>REST APIs</h3>
+        <p>Design, integration &amp; documentation</p>
+      </div>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
+
+  <!-- ══ EXPERIENCE ══ -->
   <section id="experience" class="section">
-    <h2>Experience</h2>
-    <div class="card big">
-      <h3>Infosys – System Engineer</h3>
+    <div class="section-divider"></div>
+    <span class="section-label reveal">Career</span>
+    <h2 class="reveal reveal-delay-1">Experience</h2>
+    <p class="section-sub reveal reveal-delay-2">Where I've built things that matter.</p>
+
+    <div class="exp-card reveal reveal-delay-3">
+      <div class="exp-header">
+        <div class="exp-logo">🏢</div>
+        <div class="exp-meta">
+          <h3>System Engineer</h3>
+          <p class="exp-company">Infosys</p>
+          <p class="exp-date">2023 – Present</p>
+        </div>
+      </div>
       <p>
-        Developing backend services using Java and Spring Boot.
-        Designed and maintained REST APIs and integrated databases
-        to build scalable enterprise applications.
+        Developing backend services using Java and Spring Boot for enterprise-scale applications.
+        Designed and maintained REST APIs, integrated relational databases, and collaborated
+        with cross-functional teams to deliver high-performance, maintainable systems.
       </p>
+      <div class="exp-tags">
+        <span class="exp-tag">Java</span>
+        <span class="exp-tag">Spring Boot</span>
+        <span class="exp-tag">REST APIs</span>
+        <span class="exp-tag">SQL</span>
+        <span class="exp-tag">Microservices</span>
+      </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+
+  <!-- ══ PROJECTS ══ -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
+    <div class="section-divider"></div>
+    <span class="section-label reveal">Portfolio</span>
+    <h2 class="reveal reveal-delay-1">Projects</h2>
+    <p class="section-sub reveal reveal-delay-2">A selection of things I've designed and built.</p>
+
+    <div class="projects-grid">
+      <div class="project-card reveal reveal-delay-1">
+        <span class="project-num">01</span>
         <h3>Backend Management System</h3>
-        <p>Spring Boot REST API backend with database integration.</p>
+        <p>A full-featured Spring Boot REST API backend with database integration, authentication, and CRUD operations for managing enterprise resources.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Java</span>
+          <span class="stack-tag">Spring Boot</span>
+          <span class="stack-tag">SQL</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="project-card reveal reveal-delay-2">
+        <span class="project-num">02</span>
         <h3>Data Analytics Dashboard</h3>
-        <p>Power BI dashboards with Python data analysis.</p>
+        <p>Interactive Power BI dashboards powered by Python data pipelines to surface business insights from raw datasets.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Power BI</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">SQL</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="project-card reveal reveal-delay-3">
+        <span class="project-num">03</span>
         <h3>Smart Attendance System</h3>
-        <p>GPS based attendance tracking system.</p>
+        <p>GPS-based attendance tracking system that verifies employee location in real time and logs attendance automatically.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Java</span>
+          <span class="stack-tag">GPS API</span>
+          <span class="stack-tag">Spring Boot</span>
+        </div>
       </div>
-      <div class="card">
+
+      <div class="project-card reveal reveal-delay-4">
+        <span class="project-num">04</span>
         <h3>Accident Detection System</h3>
-        <p>IoT based accident detection and alert system.</p>
+        <p>IoT-powered system that detects vehicular accidents using sensor data and dispatches instant alerts to emergency contacts.</p>
+        <div class="project-stack">
+          <span class="stack-tag">IoT</span>
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Sensors</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- CV / RESUME -->
+
+  <!-- ══ RESUME ══ -->
   <section id="cv" class="section">
-    <h2>My Resume</h2>
-    <div class="cv-card">
-      <p>You can view or download my resume below.</p>
+    <div class="section-divider"></div>
+    <span class="section-label reveal">Document</span>
+    <h2 class="reveal reveal-delay-1">My Resume</h2>
+
+    <div class="cv-card reveal reveal-delay-2">
+      <div class="cv-icon">📄</div>
+      <h3>Ayyappan Jijo — CV</h3>
+      <p>View or download my full resume to learn more about my experience, education, and technical skills.</p>
       <div class="cv-buttons">
-        <a href="Resume/Ayyappan_CV.pdf" target="_blank" class="btn">View CV</a>
-        <a href="Resume/Ayyappan_CV.pdf" download class="btn-outline">Download CV</a>
+        <a href="assets/Resume/Ayyappan_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn">View Resume</a>
+        <a href="assets/Resume/Ayyappan_CV.pdf" download="Ayyappan_Jijo_CV.pdf" class="btn-outline">Download PDF</a>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
+
+  <!-- ══ CONTACT ══ -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email : ayyappanjijo2002@gmail.com</p>
-    <p>Phone : 9994311975</p>
-    <p>
-      GitHub :
-      <a href="https://github.com/AyyappanJijo" target="_blank">
-        github.com/AyyappanJijo
-      </a>
-    </p>
+    <div class="section-divider"></div>
+    <span class="section-label reveal">Let's Connect</span>
+    <h2 class="reveal reveal-delay-1">Contact</h2>
+    <p class="section-sub reveal reveal-delay-2">Feel free to reach out — I'm always open to new opportunities.</p>
+
+    <div class="contact-grid">
+      <div class="contact-item reveal reveal-delay-1">
+        <span class="contact-icon">✉️</span>
+        <span class="contact-label">Email</span>
+        <a href="mailto:ayyappanjijo2002@gmail.com">ayyappanjijo2002@gmail.com</a>
+      </div>
+
+      <div class="contact-item reveal reveal-delay-2">
+        <span class="contact-icon">📱</span>
+        <span class="contact-label">Phone</span>
+        <a href="tel:+919994311975">+91 99943 11975</a>
+      </div>
+
+      <div class="contact-item reveal reveal-delay-3">
+        <span class="contact-icon">🐙</span>
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/AyyappanJijo" target="_blank" rel="noopener noreferrer">github.com/AyyappanJijo</a>
+      </div>
+    </div>
   </section>
 
+
+  <!-- ══ FOOTER ══ -->
   <footer>
-    © 2026 Ayyappan Jijo
+    © 2026 <span>Ayyappan Jijo</span> — Built with passion &amp; clean code.
   </footer>
 
+
+  <!-- ══ SCRIPTS ══ -->
   <script src="bg-rotate.js"></script>
+  <script>
+    /* ─────────────────────────────────────────
+       1. SCROLL REVEAL
+       Adds .js-ready to body FIRST (enables CSS animation),
+       then immediately checks which elements are already
+       in view — so nothing stays hidden on page load.
+    ───────────────────────────────────────── */
+    const reveals = document.querySelectorAll('.reveal');
+
+    // Enable animation mode
+    document.body.classList.add('js-ready');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+
+    /* ─────────────────────────────────────────
+       2. HAMBURGER MENU
+    ───────────────────────────────────────── */
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('nav-drawer');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      drawer.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.drawer-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        drawer.classList.remove('open');
+      });
+    });
+
+
+    /* ─────────────────────────────────────────
+       3. SCROLL SPY — highlights active nav link
+    ───────────────────────────────────────── */
+    const sections = document.querySelectorAll('section[id]');
+    const allLinks = document.querySelectorAll('.nav-links a, .drawer-link');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        if (window.scrollY >= sec.offsetTop - 160) current = sec.id;
+      });
+      allLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    }, { passive: true });
+  </script>
 
 </body>
 </html>
