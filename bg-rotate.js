@@ -23,10 +23,10 @@ window.addEventListener("scroll", () => {
 
 // ── BACKGROUND AUTO CHANGE every 50 seconds with smooth fade ──
 const images = [
-  "assets/Photo/Pro.jpg",
-  "assets/Photo/Programer.jpg",
-  "assets/Photo/System.jpg",
-  "assets/Photo/Techie.jpg"
+  "Photo/Pro.jpg",
+  "Photo/Programer.jpg",
+  "Photo/System.jpg",
+  "Photo/Techie.jpg"
 ];
 
 let bgIndex = 0;
